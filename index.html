@@ -328,6 +328,7 @@
     font-size:14px;font-weight:700;color:var(--ink-soft);
     padding:13px 16px;border-radius:11px;background:var(--paper-dim);
   }
+  .tier[hidden]{display:none !important}
   .tier .num{font-weight:700;font-size:17px;color:var(--ink)}
   .tier.hot{background:var(--night);color:#fff;font-weight:800;border:1.5px solid var(--sun)}
   .tier.hot .num{color:var(--gold);font-size:19px}
@@ -416,7 +417,7 @@
     </div>
 
     <div class="cta-row">
-            <a class="btn btn-sun" href="https://www.xn--hj2bz1kma567u.com/channels/L2NoYW5uZWxzLzIzMDY0/C00007/classes/198145/information" target="_blank" rel="noopener">소수정예 1기 · 8주 클래스</a>
+            <a class="btn btn-sun" href="https://www.xn--hj2bz1kma567u.com/channels/L2NoYW5uZWxzLzIzMDY0/C00007/classes/198145/information">소수정예 1기 · 8주 클래스</a>
     </div>
     <p class="cta-sub">9/5 (토) 개강 · 8주 과정 · 온라인 + 오프라인</p>
   </div>
@@ -437,20 +438,20 @@
       <div class="price-body">
         <div class="msrp">정가 <span class="num strike">3,000,000원</span></div>
         <div class="tiers">
-          <div class="tier hot"><span>라이브 당일 (9/1) 결제</span><span class="t-right"><i class="off">-70만원</i><span class="num">2,300,000원</span></span></div>
-          <div class="tier"><span>9/4 (금) 자정까지</span><span class="t-right"><i class="off dim">-50만원</i><span class="num">2,500,000원</span></span></div>
+          <div class="tier" id="tier9x1" hidden><span>라이브 당일 (9/1) 결제</span><span class="t-right"><i class="off">-70만원</i><span class="num">2,300,000원</span></span></div>
+          <div class="tier hot" id="tier9x4"><span>9/4 (금) 자정까지</span><span class="t-right"><i class="off dim">-50만원</i><span class="num">2,500,000원</span></span></div>
         </div>
-        <p class="installment num">12개월 할부 시 월 192,000원 · 하루로 나누면 커피 한 잔 값, 6,400원</p>
+        <p class="installment num" id="installment">12개월 할부 시 월 208,333원 · 하루로 나누면 커피 한 잔 값, 6,944원</p>
         <ul class="price-includes">
           <li><span class="b-ico">📡</span><span class="b-tx"><b>온라인 라이브 이론 강의 + Q&A</b><small>실시간으로 묻고 바로 답을 듣는 이론 4강</small></span></li>
           <li><span class="b-ico">🎯</span><span class="b-tx"><b>1:1 개인별 상황에 맞는 밀착 상담</b><small>내 자금 · 내 지역 기준의 1호점 전략</small></span></li>
           <li><span class="b-ico">🏆</span><span class="b-tx"><b>스페셜 특강 · 오프라인 모임 · 성과 공유회</b><small>우수 성과자 특별 포상까지</small></span></li>
-          <li><span class="b-ico">🎬</span><span class="b-tx"><b>전 회차 다시보기 제공</b><small>개강일부터 6개월간</small></span></li>
+          <li><span class="b-ico">🎬</span><span class="b-tx"><b>전 회차 다시보기 제공</b><small>개강일부터 12개월간</small></span></li>
           <li><span class="b-ico">🤖</span><span class="b-tx"><b>운영 자동화 AI 툴 2개월 무료 이용권</b><small>자유쌤이 숙소 8개를 주 1~2시간으로 돌리는 그 툴</small></span></li>
           <li><span class="b-ico">📂</span><span class="b-tx"><b>실전 자료 풀패키지</b><small>입지 분석 자료, 임장 체크리스트, 전대차 동의서, 단기임대 계약서, 부동산 소통 매뉴얼, 숙소 이용 가이드 템플릿, 청소 매뉴얼, 청소 알바 구인글, 검증된 가성비 인테리어 물품 리스트, 자동 안내 메시지 샘플, 숙소 마케팅 문구 등 전략 자료집 등</small></span></li>
         </ul>
         <div class="price-cta">
-          <a class="btn btn-sun" id="payBtn" href="https://www.xn--hj2bz1kma567u.com/channels/L2NoYW5uZWxzLzIzMDY0/C00007/classes/198145/information" target="_blank" rel="noopener">1기 함께하기</a>
+          <a class="btn btn-sun" id="payBtn" href="https://www.xn--hj2bz1kma567u.com/channels/L2NoYW5uZWxzLzIzMDY0/C00007/classes/198145/information">1기 함께하기</a>
         </div>
         <p class="refund"><b>선착순 정원이 차면 마감됩니다.</b></p>
       </div>
@@ -678,7 +679,7 @@
     </details>
     <details>
       <summary>토요일에 참석이 어려우면요?</summary>
-      <div class="a">라이브 참석이 어렵더라도, 모든 회차는 라이브 종료 이후 <b>다시보기</b>가 제공됩니다 (개강일부터 6개월간 무제한으로 시청 가능).</div>
+      <div class="a">라이브 참석이 어렵더라도, 모든 회차는 라이브 종료 이후 <b>다시보기</b>가 제공됩니다 (개강일부터 12개월간 무제한으로 시청 가능).</div>
     </details>
     <details>
       <summary>오프라인 일정은 꼭 참석해야 하나요?</summary>
@@ -703,13 +704,13 @@
     </figure>
     </div>
     <div class="cta-row">
-      <a class="btn btn-sun" href="https://www.xn--hj2bz1kma567u.com/channels/L2NoYW5uZWxzLzIzMDY0/C00007/classes/198145/information" target="_blank" rel="noopener">1기 함께하기</a>
+      <a class="btn btn-sun" href="https://www.xn--hj2bz1kma567u.com/channels/L2NoYW5uZWxzLzIzMDY0/C00007/classes/198145/information">1기 함께하기</a>
     </div>
 
     <div class="terms">
       <h4>강의 이용 안내</h4>
       <ul>
-        <li>강의 구성 (8주): 온라인 라이브 이론 강의 4회 (9/5, 9/12, 9/19, 10/3 토 13:00~15:00) + 1:1 온라인 밀착 코칭 + 오프라인 모임 · 매물 탐방 (10/10) + 스페셜 특강 (10/17) + 성과 공유회 (10/31) + 전 회차 다시보기</li>
+        <li>강의 구성 (8주): 온라인 라이브 이론 강의 4회 (9/5, 9/12, 9/19, 10/3 토 13:00~15:00) + 1:1 온라인 밀착 코칭 + 오프라인 모임 · 매물 탐방 (10/10) + 스페셜 특강 (10/17) + 성과 공유회 (10/31) + 전 회차 다시보기 (개강일부터 12개월간)</li>
         <li>오프라인 일정은 서울 · 수도권에서 진행되며 필수 참석이 아닙니다. 미참석에 따른 별도 환불 · 보상은 제공되지 않습니다.</li>
         <li>운영 자동화 AI 툴은 결제일부터 2개월 무료 제공되며, 이후 이용 조건은 강의 중 안내됩니다.</li>
         <li><b style="color:rgba(255,255,255,.78)">강의 자료 및 다시보기 영상은 저작권법의 보호를 받는 저작물입니다. 무단 녹화 · 복제 · 공유 · 재판매가 적발되는 경우 사전 통보 없이 수강 권한이 즉시 회수 (환불 불가) 되며, 저작권법 위반에 따른 민형사상 책임 (손해배상 청구 및 형사 고소) 을 물을 수 있습니다.</b></li>
@@ -738,5 +739,41 @@
 </script>
 
 
+
+<script>
+/* 결제 CTA
+   1) 단독 페이지면 그냥 기본 동작
+   2) iframe 안이면 새 탭을 먼저 시도 (PC에서 성공 -> 겹침 없음)
+   3) 새 탭이 차단되면 그때만 iframe 자체 이동 (모바일 폴백) */
+(function(){
+  function inFrame(){ try { return window.top !== window.self; } catch(e){ return true; } }
+  document.querySelectorAll('a.btn-sun[href]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      if (!inFrame()) return;
+      e.preventDefault();
+      var u = a.href, w = null;
+      try { w = window.open(u, '_blank'); } catch(err) { w = null; }
+      var blocked = (!w || w.closed || typeof w.closed === 'undefined');
+      if (blocked) { window.location.href = u; }
+    });
+  });
+})();
+</script>
+
+<script>
+/* 가격 표기 자동 전환
+   기본 표시는 250만원 기준(안전). 9/2 00:00 KST 이전에만 230만원 단계를 노출한다.
+   KST 2026-09-02 00:00 = UTC 2026-09-01 15:00 */
+(function(){
+  var CUT = Date.UTC(2026, 8, 1, 15, 0, 0);
+  if (Date.now() >= CUT) return;               // 9/2 이후 -> 기본(250만원) 유지
+  var a = document.getElementById('tier9x1');
+  var b = document.getElementById('tier9x4');
+  var ins = document.getElementById('installment');
+  if (a) { a.hidden = false; a.classList.add('hot'); }
+  if (b) { b.classList.remove('hot'); }
+  if (ins) { ins.textContent = '12개월 할부 시 월 192,000원 · 하루로 나누면 커피 한 잔 값, 6,400원'; }
+})();
+</script>
 </body>
 </html>
