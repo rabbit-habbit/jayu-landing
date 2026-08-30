@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>버튼 진단 테스트</title>
+<style>
+ body{margin:0;background:#0B1220;color:#fff;font-family:'Apple SD Gothic Neo',sans-serif;padding:22px}
+ h1{font-size:22px;margin:0 0 6px}
+ .lead{color:#9AA6BC;font-size:15px;line-height:1.6;margin:0 0 22px}
+ .box{background:#131F36;border:1px solid #26344F;border-radius:14px;padding:16px;margin-bottom:14px}
+ .box h2{font-size:15px;margin:0 0 4px;color:#FFC24B}
+ .box small{display:block;color:#7D8AA3;font-size:13px;margin-bottom:12px;line-height:1.5}
+ a.t,button.t{display:block;width:100%;box-sizing:border-box;text-align:center;
+   background:linear-gradient(180deg,#FF6B2C,#E5541A);color:#fff;text-decoration:none;
+   font-size:17px;font-weight:800;padding:16px;border:0;border-radius:12px;font-family:inherit;cursor:pointer}
+ #info{background:#0E1729;border:1px solid #26344F;border-radius:12px;padding:14px;
+   font-size:12px;color:#8FA0BC;line-height:1.7;word-break:break-all;margin-top:20px}
+</style></head><body>
+<h1>버튼 진단 테스트</h1>
+<p class="lead">아래 버튼을 <b>위에서부터 하나씩</b> 눌러보고,<br>각각 어떻게 되는지 알려주세요.<br>(이동했으면 뒤로가기로 돌아오세요)</p>
+
+<div class="box"><h2>① 같은 탭 이동 · 우리 사이트</h2><small>가장 기본 방식. 링크 자체가 되는지 확인</small>
+<a class="t" href="arrived.html">① 누르기</a></div>
+
+<div class="box"><h2>② 새 탭 열기 · 우리 사이트</h2><small>target=_blank 가 막히는지 확인</small>
+<a class="t" href="arrived.html" target="_blank">② 누르기</a></div>
+
+<div class="box"><h2>③ 같은 탭 이동 · 결제 사이트</h2><small>래빗해빛 결제페이지로 직접 이동</small>
+<a class="t" href="https://www.xn--hj2bz1kma567u.com/channels/L2NoYW5uZWxzLzIzMDY0/C00007/classes/198145/information">③ 누르기</a></div>
+
+<div class="box"><h2>④ 자바스크립트 이동 · 결제 사이트</h2><small>JS로 강제 이동</small>
+<button class="t" id="b4">④ 누르기</button></div>
+
+<div class="box"><h2>⑤ 결제 사이트 최상위 주소</h2><small>긴 주소가 문제인지 확인</small>
+<a class="t" href="https://www.xn--hj2bz1kma567u.com/">⑤ 누르기</a></div>
+
+<div id="info">확인 중...</div>
+<script>
+document.getElementById('b4').addEventListener('click',function(){
+  location.href='https://www.xn--hj2bz1kma567u.com/channels/L2NoYW5uZWxzLzIzMDY0/C00007/classes/198145/information';
+});
+var f; try{ f = (window.top!==window.self)?'예':'아니오'; }catch(e){ f='예(차단됨)'; }
+document.getElementById('info').innerHTML =
+  '<b>이 화면 정보 (그대로 캡처해 주세요)</b><br>'+
+  '화면 폭: '+window.innerWidth+'px<br>'+
+  'iframe 안: '+f+'<br>'+
+  'JS 동작: 정상<br>'+
+  'UA: '+navigator.userAgent;
+</script></body></html>
