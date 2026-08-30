@@ -737,18 +737,6 @@
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 
-<script>
-/* 퍼블 iframe 임베드용 높이 리포터 */
-(function(){
-  function post(){
-    var h = document.documentElement.scrollHeight;
-    if (window.parent !== window) parent.postMessage({jayuHeight:h}, '*');
-  }
-  window.addEventListener('load', post);
-  window.addEventListener('resize', post);
-  new ResizeObserver(post).observe(document.documentElement);
-})();
-</script>
 
 </body>
 </html>
