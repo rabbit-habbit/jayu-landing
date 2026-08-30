@@ -750,21 +750,5 @@
 })();
 </script>
 
-<script>
-/* 결제 CTA: 기본은 같은 탭 이동(모든 브라우저·인앱 브라우저 호환).
-   퍼블 iframe 안에 삽입된 경우에만 최상위 창을 이동시킨다. */
-(function(){
-  function inFrame(){ try { return window.top !== window.self; } catch(e){ return true; } }
-  document.querySelectorAll('a.btn-sun[href]').forEach(function(a){
-    a.addEventListener('click', function(e){
-      if (!inFrame()) return;              // 최상위면 기본 동작 그대로
-      e.preventDefault();
-      var u = a.href;
-      try { window.top.location.href = u; }
-      catch(err) { window.open(u, '_blank'); }
-    });
-  });
-})();
-</script>
 </body>
 </html>
